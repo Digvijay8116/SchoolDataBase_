@@ -1,0 +1,56 @@
+put
+http://localhost:3001/student/register
+{
+    "name":"digvijay",
+    "age":"28",
+    "phoneNumber":8896485125,
+    "assignedTeacherId":1,
+    "studentId":1,
+    "courses":["phy","chem","math"]
+}
+
+put
+http://localhost:3001/teacher/register
+{
+    "name":"vishal",
+    "age":32,
+    "phoneNumber":8869745126,
+    "teacherId":1
+}
+
+put
+http://localhost:3001/agreegation/getStudentBySubject
+{
+    "subject":"chem"
+}
+
+put
+http://localhost:3001/agreegation/getTeacherByExpertIn
+{
+    "expertIn":"math"
+}
+
+put
+http://localhost:3001/agreegation/getStudentByTeacherId
+{
+    "teacherId":1
+}
+
+put
+http://localhost:3001/agreegation/getTeacherByStudentId
+{
+    "studentId":44
+}
+
+post
+http://localhost:3001/populate/studentRights
+{
+   "studentId":"65d32b752ac4f1c3d0564196",
+   "rights":"can access all data "
+}
+
+post
+http://localhost:3001/populate/studentByRight
+{
+ "_id":"65d32eea2ac4f1c3d056419e" // this id is of rights data 
+}
