@@ -9,8 +9,8 @@
       "dest":"/"
     },
     {
-      "src": "/swagger/(.*)",
-      "dest": "/swagger/$1",
+      "src": "/(.*)",
+      "dest": "/",
       "headers": { "Content-Type": "application/json" } 
     },
   ]
